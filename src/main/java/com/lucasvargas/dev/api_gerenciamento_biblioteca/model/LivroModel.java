@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "tb_livro")
 @AllArgsConstructor
@@ -18,7 +20,11 @@ public class LivroModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String titulo;
+    private Integer anoPublicacao;
+    private String sobre;
+    private String linguaOriginal;
+    private Integer quantidadePaginas;
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
