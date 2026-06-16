@@ -20,7 +20,7 @@ public class AutorController {
     @PostMapping
     public ResponseEntity<String> cadastrarAutor(@PathVariable AutorModel autorCadastrado){
         autorService.cadastrarAutor(autorCadastrado);
-        return ResponseEntity.ok("Autor criado com sucesso!");
+        return ResponseEntity.ok("O Autor criado com sucesso!");
     }
 
     @GetMapping
@@ -36,13 +36,13 @@ public class AutorController {
     @PutMapping("/{id}")
     public ResponseEntity<String> atualizarAutor(@PathVariable Long id, @RequestBody AutorModel autorAtualizar){
         autorService.atualizarAutor(id, autorAtualizar);
-        return ResponseEntity.ok("Autor editado com sucesso!");
+        return ResponseEntity.ok("O Autor editado com sucesso!");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletarAutor(@PathVariable Long id){
         autorService.deletarAutor(id);
-        return ResponseEntity.ok("Autor deletado com sucess!");
+        return ResponseEntity.ok("O Autor deletado com sucess!");
     }
 
 }
