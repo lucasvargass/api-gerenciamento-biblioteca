@@ -18,7 +18,7 @@ public class AutorController {
     private final AutorService autorService;
 
     @PostMapping
-    public ResponseEntity<String> cadastrarAutor(@PathVariable AutorModel autorCadastrado){
+    public ResponseEntity<String> cadastrarAutor(@RequestBody AutorModel autorCadastrado){
         autorService.cadastrarAutor(autorCadastrado);
         return ResponseEntity.ok("O Autor criado com sucesso!");
     }

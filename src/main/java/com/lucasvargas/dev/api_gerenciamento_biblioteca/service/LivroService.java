@@ -41,8 +41,8 @@ public class LivroService {
         livroBase.setLinguaOriginal(livroAtualizar.getLinguaOriginal());
         livroBase.setQuantidadePaginas(livroAtualizar.getQuantidadePaginas());
 
-        AutorModel autorBanco = autorService.buscarAutorPorId(livroAtualizar.getAutorModel().getId());
-        livroBase.setAutorModel(autorBanco);
+        AutorModel autorBanco = autorService.buscarAutorPorId(livroAtualizar.getAutorDoLivro().getId());
+        livroBase.setAutorDoLivro(autorBanco);
 
         livroRepository.save(livroBase);
     }

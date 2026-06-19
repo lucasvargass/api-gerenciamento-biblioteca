@@ -28,6 +28,6 @@ public class LivroModel {
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
-    private AutorModel autorModel;
+    private AutorModel autorDoLivro;
 
 }

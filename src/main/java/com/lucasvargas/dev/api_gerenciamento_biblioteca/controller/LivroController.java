@@ -18,7 +18,7 @@ public class LivroController {
     private final LivroService livroService;
 
     @PostMapping
-    public ResponseEntity<String> cadastrarLivro(@PathVariable LivroModel livroCadastrado){
+    public ResponseEntity<String> cadastrarLivro(@RequestBody LivroModel livroCadastrado){
         livroService.cadastrarLivro(livroCadastrado);
         return ResponseEntity.ok("O Livro foi cadastrado com sucesso");
     }
